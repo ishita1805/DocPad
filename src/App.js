@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-import sendAsync from './message-control/renderer';
+import sendAsync from './api/renderer';
 
 function App() {
-    const [message, setMessage] = useState('SELECT * FROM repositories');
+    const [message, setMessage] = useState('SELECT TIME() as time, DATE() as date');
     const [response, setResponse] = useState();
 
     const send = (sql) => {
-        sendAsync(sql).
-            then((result) => setResponse(result));
+        sendAsync(sql)
+            .then((result) => setResponse(result));
     }
 
     return (

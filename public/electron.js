@@ -1,6 +1,6 @@
 const electron = require('electron');
 
-require('../src/message-control/ipcmain');
+require('../src/api/ipcmain');
 
 const { app } = electron;
 const { BrowserWindow } = electron;
@@ -35,20 +35,21 @@ function createWindow() {
     })
 
     mainWindow.on('closed', () => {
-        mainWindow = null;
+       app.quit();
     });
 }
 
-app.on('ready', createWindow);
+app.whenReady().then(() => {
+    createWindow()
+  
+    app.on('activate', function () {
+      // On macOS it's common to re-create a window in the app when the
+      // dock icon is clicked and there are no other windows open.
+      if (BrowserWindow.getAllWindows().length === 0) createWindow()
+    })
+  })
 
 app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
-        app.quit();
-    }
+    if (process.platform !== 'darwin')  app.quit();
 });
 
-app.on('activate', () => {
-    if (mainWindow === null) {
-        createWindow();
-    }
-});
