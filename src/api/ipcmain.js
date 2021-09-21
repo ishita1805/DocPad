@@ -1,5 +1,5 @@
 const { ipcMain } = require('electron')
-const database = require('./db')
+const database = require('./db/db')
 
 ipcMain.on('asynchronous-message', (event, arg) => {
     const sql = arg
