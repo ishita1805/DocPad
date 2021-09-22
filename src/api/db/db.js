@@ -7,7 +7,6 @@ const database = new sqlite3.Database('./public/db.sqlite3', (err) => {
 })
 
 let query = fs.readFileSync(path.join(__dirname, 'schema.sql'), 'utf8')
-let result = database.exec(query)
-console.log(result);
+database.exec(query)
 
 module.exports = database

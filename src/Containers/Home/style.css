@@ -1,0 +1,36 @@
+.subtitle{
+    color:#837E98;
+    font-size:500;
+}
+.patients-header{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    width:80%;
+    justify-content:space-between;
+    margin:5vh 0 1vh 0;
+}
+.patients-header span{
+    color:#837E98;
+}
+.filter-button{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    cursor:pointer;
+}
+.patients-cont{
+    display:flex;
+    flex-direction:column;
+    width:80%;
+}
+@media screen and (max-width:1300px){
+   .patients-header, .patients-cont{
+       width:90%;
+   }
+}
+@media screen and (max-width:1000px){
+    .patients-header, .patients-cont{
+        width:95%;
+    }
+ }

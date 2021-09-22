@@ -15,6 +15,8 @@ function createWindow() {
         width: 1200,
         height: 800,
         show: false,
+        minWidth : 800,
+        minHeight: 600,
         title:"Doc Pad",
         webPreferences: {
             nodeIntegration: true,

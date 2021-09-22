@@ -1,0 +1,32 @@
+.patien-card{
+    margin:10px 0;
+    border-radius:8px;
+    background:white;
+    padding:1vh;
+    flex-grow:1;
+    box-shadow:0 0 8px rgba(49, 1, 1, 0.116);
+}
+.patient-info{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+}
+.patient-info-2{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+.patient-info-2 p{
+    font-weight:600;
+    margin:0;
+    color:#B4B2C8;
+}
+.paginate{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+.paginate span{
+    cursor:pointer;
+}
