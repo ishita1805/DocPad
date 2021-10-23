@@ -4,9 +4,9 @@ import './style.css'
 
 const Profile = () => {
     return (
-        <Background>
+        <>
             <h1>Profile Page</h1>
-        </Background>
+        </>
     )
 }
 

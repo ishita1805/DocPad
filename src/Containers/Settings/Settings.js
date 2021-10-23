@@ -4,9 +4,9 @@ import './style.css'
 
 const Setting = () => {
     return (
-        <Background>
+        <>
             <h1>Settings Page</h1>
-        </Background>
+        </>
     )
 }
 

@@ -1,51 +1,7 @@
 .content-container{
+    flex-direction: column;
+    height:100vh;
     flex-grow: 1;
-    margin-left:-1.8vh;
-    background:url('../../assets/bg.png');
-    background-size: cover;
-    padding:2.5vh 2.5vh 2.5vh 5vh;
-    background-repeat: no-repeat;
-    overflow-y:scroll;
-    max-height:95vh;
-}
-.content-container h1{
-    padding:0;
-    margin:2vh 0;
-    color:#2C2068;
-    font-weight:600;
-
-}
-.content-container h2{
-    padding:0;
-    margin:1vh 0;
-    color:#2C2068;
-    font-weight:600;
-}
-.content-container h3{
-    padding:0;
-    margin:0.2vh 0;
-    color:#2C2068;
-    font-weight:600;    
-}
-.content-container h4{
-    padding:0;
-    margin:0.2vh 0;
-    font-weight:600;   
-    color:#837E98;
-}
-.content-container h5{
-    padding:0;
-    margin:0.2vh 0;
-    font-weight:600;   
-    color:#B4B2C8; 
-}
-.content-container h6{
-    padding:0;
-    margin:0.2vh 0;
-    font-weight:600;   
-    color:#B4B2C8;  
-}
-.content-container p{
-    margin:1vh 0;
-    padding: 0;
+    margin-left: -2vh;
+    overflow-y: scroll;
 }

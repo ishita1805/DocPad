@@ -1,13 +1,25 @@
 .nav-container{
-    width:100vw;
-    height:100vh;
     display:flex;
+    overflow: hidden;
     flex-direction:row;
+    width:100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url('../../assets/bg.png');
+    height:100vh;
+    margin:0;
+    padding:0;
+}
+.content-main{
+    overflow-y: scroll;
+    margin:0;
+    padding:0;
 }
 .nav-bar{
     background:#090131;
     padding:7vh 3vh 0 3vh;
     color:#9692A6;
+    min-width:200px;
     width:200px;
     display:flex;
     transition: 0.08s;
@@ -18,26 +30,41 @@
     padding:7vh 2vh 0 2vh;
     color:#9692A6;
     width:60px;
+    min-width:60px;
     display:flex;
     transition: 0.18s;
     flex-direction:column;
 }
+.profile-pic-cont{
+    display:flex;
+    flex-direction: row;
+    border:solid 2px #1b133d;
+    border-radius: 8px;
+    align-items: center;
+}
+.nav-bar-small .profile-pic-cont{
+    border:none;
+    padding:0;
+}
+.profile-pic-cont p{
+    font-size:17px;
+    font-weight: 500;
+    margin-left: 2vh;
+}
+.nav-bar-small .profile-pic-cont p{
+  display: none;
+}
 .nav-bar .nav-profile-pic{
-    /* height:8vh;
-    width:8vh; */
-    height:60px;
-    width:60px;
-    border-radius:30px;
-    margin-left:2vh;
+    height:50px;
+    width:50px;
+    border-radius:5px;
+    margin:5px;
     overflow: hidden;
 }
 .nav-bar-small .nav-profile-pic{
-    /* height:7vh;
-    width:7vh; */
-    border-radius:25px;
+    border-radius:5px;
     height:50px;
-    width:50px;
-    
+    width:50px !important;
     overflow: hidden;
 }
 .nav-profile-pic img{
@@ -86,7 +113,7 @@
     font-weight:500;
 }
 .nav-cursor{
-    margin:4vh 0;
+    margin:2vh 0;
     background:#874FFF;
     color:white;
     font-weight:500;

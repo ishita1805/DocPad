@@ -6,9 +6,11 @@ import Patients from './Containers/Patients/Patients'
 import Prescription from './Containers/Prescription/Prescription'
 import Profile from './Containers/Profile/Profile'
 import Settings from './Containers/Settings/Settings'
+import Background from './Components/Background/Background';
 
 const App = () => {
     return (
+        <div class='app'>
         <Nav>
             <Switch>
                 <Route path="/" exact><Home/></Route>
@@ -18,6 +20,7 @@ const App = () => {
                 <Route path="/settings" exact><Settings/></Route>
             </Switch>
         </Nav>
+        </div>
     );
 }
 

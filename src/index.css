@@ -1,15 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-  width:100vw;
-  height:100vh;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', 'Oxygen', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.app{
+  display:flex;
+  flex-direction:row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 ::-webkit-scrollbar{
   width:7px;
   background:#090131;
