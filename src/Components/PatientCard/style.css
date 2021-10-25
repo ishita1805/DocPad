@@ -32,7 +32,7 @@
     flex-direction: column;
     justify-content: center;
     font-size:16px;
-    font-weight:lighter;
+    font-weight:400;
     color:#cec9df;
 }
 .psn-patient-info-active{
@@ -40,7 +40,7 @@
     flex-direction: column;
     justify-content: center;
     font-size:16px;
-    font-weight:500;
+    font-weight:600;
     color:rgb(31, 6, 51);
 }
 .psn-patient-info p{

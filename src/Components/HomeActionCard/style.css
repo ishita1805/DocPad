@@ -1,0 +1,29 @@
+.hac{
+    background:#f1eefa;
+    padding:2vh 3vh;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    color:#2C2068;
+    border-radius:12px;
+    margin-right: 3vh;
+    font-weight: 600;
+    box-shadow: 0 0 26px #58031534;
+}
+.hac p{
+    margin:0;
+    font-size: 15px;
+    color:#2C2068;
+    font-weight: 500;
+}
+.hac span{
+    background:#2C2068;
+    padding:1.3vh;
+    border-radius: 6vh;
+    color:#f1eefa;
+}
+.hac b{
+    color: rgb(226, 104, 124);
+}

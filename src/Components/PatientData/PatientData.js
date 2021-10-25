@@ -1,14 +1,23 @@
-import React,{ useState } from 'react'
+import React,{ useState, useContext } from 'react'
 import PrescriptionCard from '../PrescriptionCard/PrescriptionCard';
+import { Redirect } from 'react-router-dom';
+import { PatientContext } from '../../Context/Patient';
 import './style.css'
 
 const PatientData = () => {
     const [active, setActive] = useState(1);
+    const [red, setRed] = useState(false);
+    const {ID, setPrescriptionID} = useContext(PatientContext);
     const img = "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80"
-
     
+    const newPrescription = () => {
+        setPrescriptionID(ID);
+        setRed(true);
+    }
+
     return (
         <>
+            {red?<Redirect to='/prescription'/>:null}
             <div className='pc-header'>
                 <div className='pch-head-in'>
                     <div className='pch-pp'>
@@ -20,7 +29,7 @@ const PatientData = () => {
                         <p>Chronic sinusitis</p>
                     </div>
                 </div>
-                <button className='pch-cta'>
+                <button className='pch-cta' onClick={newPrescription}>
                     <span class="material-icons">note_add</span> 
                     &ensp;Add New 
                 </button>
@@ -75,7 +84,7 @@ const PatientData = () => {
                 }
                 {
                     active===3?
-                    <></>:
+                    <>Test Graphs</>:
                     null
                 }
             </div>

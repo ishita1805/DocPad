@@ -13,12 +13,14 @@ const App = () => {
         <div class='app'>
         <Nav>
             <Switch>
-                <Route path="/" exact><Home/></Route>
-                <PatientProvider><Route path="/patients" exact><Patients/></Route></PatientProvider>
-                <Route path="/prescription" exact><Prescription/></Route>
-                <Route path="/profile" exact><Profile/></Route>
-                <Route path="/settings" exact><Settings/></Route>
-            </Switch>
+                <PatientProvider>
+                    <Route path="/" exact><Home/></Route>
+                    <Route path="/patients" exact><Patients/></Route>
+                    <Route path="/prescription" exact><Prescription/></Route>
+                    <Route path="/profile" exact><Profile/></Route>
+                    <Route path="/settings" exact><Settings/></Route>
+                </PatientProvider>
+                </Switch>
         </Nav>
         </div>
     );

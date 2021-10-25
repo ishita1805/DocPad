@@ -1,27 +1,109 @@
+.home-container{
+    padding:3vh 5vh;
+    margin-left: 0.5vh;
+    display: flex;
+    height:94vh;
+    flex-direction: column;
+}
+.home-container h1{
+    margin:1vh 0;
+    color: #2C2068;
+}
 .subtitle{
     color:#837E98;
     font-size:500;
     margin:3vh 0 !important;
 }
-.patients-header{
+.home-header{
     display:flex;
-    flex-direction:row;
-    align-items:center;
-    width:90%;
-    justify-content:space-between;
-    margin:5vh 0 1vh 0;
+    flex-wrap:wrap;
+    margin:3vh 0;
+    justify-content: flex-start;
 }
-.patients-header span{
-    color:#837E98;
+.home-header:nth-child(4){
+    flex-wrap:nowrap;
+    justify-content: space-between;
 }
-.filter-button{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    cursor:pointer;
-}
-.patients-cont{
+.patient-search{
     display:flex;
     flex-direction:column;
-    width:90%;
+    width:65%;
+    max-width:800px;
+    flex-grow: 1;
+}
+.ps-box{
+    padding:1.5vh 2vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius:12px;
+    background: white;
+    box-shadow: 0 0 26px #533ad11e;
+}
+.ps-box input{
+    outline:none;
+    border:none;
+    background: none;
+    color:#150e35;
+    margin-left: 2vh;
+    font-size:16px;
+    flex-grow: 1;
+}
+.ps-box input::placeholder{
+    color:#837E98;
+}
+.ps-box span{
+    color: #2C2068;
+    cursor: pointer;
+}
+.ps-box span:nth-child(3){
+    color: #837E98;
+    cursor: pointer;
+}
+.ps-result{
+    padding:1.5vh 2vh;
+    display: flex;
+    margin:2vh 0;
+    margin-bottom: 0;
+    flex-direction: column;
+    border-radius:12px;
+    background: white;
+    box-shadow: 0 0 26px #533ad11e;
+}
+.ps-result h3{
+    margin: 1vh 0;
+    color: #2C2068;
+    font-size:18px;
+}
+.ps-result p{
+    padding:1.5vh 0;
+    color:#837E98;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0;
+    cursor:pointer;
+    border-bottom: solid 1px #efecfc;
+}
+.tasks{
+    padding:1.5vh 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-width:350px;
+    min-width: 300px;
+    margin-left:2.5%;
+    flex-grow: 1;
+    border-radius:12px;
+    background: white;
+    box-shadow: 0 0 26px #533ad11e;
+    color:#2C2068;
+}
+
+@media screen and (max-width:1300px){
+    .patient-search{
+        width:80%;
+    }
 }
