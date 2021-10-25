@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Nav from './Components/Nav/Nav';
 import { Switch, Route } from 'react-router';
 import Home from './Containers/Home/Home'
@@ -6,7 +6,7 @@ import Patients from './Containers/Patients/Patients'
 import Prescription from './Containers/Prescription/Prescription'
 import Profile from './Containers/Profile/Profile'
 import Settings from './Containers/Settings/Settings'
-import Background from './Components/Background/Background';
+import { PatientProvider } from './Context/Patient'
 
 const App = () => {
     return (
@@ -14,7 +14,7 @@ const App = () => {
         <Nav>
             <Switch>
                 <Route path="/" exact><Home/></Route>
-                <Route path="/patients" exact><Patients/></Route>
+                <PatientProvider><Route path="/patients" exact><Patients/></Route></PatientProvider>
                 <Route path="/prescription" exact><Prescription/></Route>
                 <Route path="/profile" exact><Profile/></Route>
                 <Route path="/settings" exact><Settings/></Route>

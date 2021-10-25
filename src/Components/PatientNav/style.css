@@ -1,8 +1,9 @@
 .side-nav-patients{
-    width:270px !important;
+    min-width:270px !important;
     background:#1b133d;
     height:100vh;
     position: sticky;
+    border-radius: 0 15px 15px 0;
     top:0;
     display:flex;
     flex-direction: column;
@@ -17,21 +18,23 @@
 .psn-head span{
     align-self: flex-end;
     padding:0.5vh;
-    background:#874FFF;
+    background: linear-gradient(-90deg, rgba(244,144,161,1) 0%, rgba(248,176,129,1) 100%);
     cursor:pointer;
+    margin-left: 1vh;
     color:white;
     border-radius:6vh;
 }
 .psn-search{
     outline:none;
     border:none;
-    padding:1.5vh;
+    padding:1.5vh 2vh;
+    font-size:15px;
     border-radius:5px;
     color:#cec9df;
     background:#29214e;
 }
 .psn-search::placeholder{
-    color:#9692A6;
+    color:#635f72;
 }
 .psn-scroll{
     flex-grow:1;
@@ -98,9 +101,9 @@
 }
 .psn-patient-info-active p{
     margin:2px;
-  }
-  .psn-patient-info-active p:nth-child(2){
-      color:#303030;
-      font-size: 13px;
-  }
+}
+.psn-patient-info-active p:nth-child(2){
+    color:#303030;
+    font-size: 13px;
+}
   

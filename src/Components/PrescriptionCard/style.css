@@ -1,0 +1,26 @@
+.dia-info-full{
+    border-radius:8px;
+    height:fit-content;
+    margin:1vh 2% 1vh 0;
+    width:28% !important;
+    background: #e7e4f1;   
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding:2vh;
+}
+.dia-info-full div{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dia-info-full h4, .dia-info-full p{
+    margin:0.5vh 0;
+    color:#837E98;
+}
+.dia-info-full span{
+    cursor: pointer;
+    font-size: 36px !important;
+    color:#5f529c;
+}

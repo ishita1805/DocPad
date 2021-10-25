@@ -10,9 +10,9 @@
     display:flex;
     flex-direction: row;
     align-items:center;
-    background: #facdaf;
+    background: linear-gradient(-90deg, rgba(244,144,161,1) 0%, rgb(253, 202, 168) 100%);
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     margin:1vh 0;
 }
 .psn-patient-pic{
@@ -40,8 +40,8 @@
     flex-direction: column;
     justify-content: center;
     font-size:16px;
-    font-weight:lighter;
-    color:#1a191b;
+    font-weight:500;
+    color:rgb(31, 6, 51);
 }
 .psn-patient-info p{
   margin:2px;
@@ -53,8 +53,8 @@
 .psn-patient-info-active p{
     margin:2px;
   }
-  .psn-patient-info-active p:nth-child(2){
-      color:#303030;
-      font-size: 13px;
-  }
+.psn-patient-info-active p:nth-child(2){
+    color:rgb(45, 23, 65);
+    font-size: 13px;
+}
   

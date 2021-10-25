@@ -1,5 +1,4 @@
 import React from 'react'
-import Background from '../../Components/Background/Background'
 import './style.css'
 
 const Profile = () => {
