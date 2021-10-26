@@ -7,6 +7,7 @@ import Prescription from './Containers/Prescription/Prescription'
 import Profile from './Containers/Profile/Profile'
 import Settings from './Containers/Settings/Settings'
 import { PatientProvider } from './Context/Patient'
+import TaskManager from './Containers/TaskManager/TaskManager';
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                     <Route path="/prescription" exact><Prescription/></Route>
                     <Route path="/profile" exact><Profile/></Route>
                     <Route path="/settings" exact><Settings/></Route>
+                    <Route path="/taskmanager" exact><TaskManager/></Route>
                 </PatientProvider>
                 </Switch>
         </Nav>

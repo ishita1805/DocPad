@@ -1,4 +1,5 @@
 import React from 'react'
+import DailyCalendar from '../../Components/Calendar/DailyCalendar'
 import Highlight from '../../Components/Highlight/Highlight'
 import HomeActionCard from '../../Components/HomeActionCard/HomeActionCard'
 import './style.css'
@@ -49,7 +50,8 @@ const Home = () => {
                 </div>
 
                 <div className='tasks'>
-                    <h3>Today's Schedule</h3>
+                    <h3>Today's Schedule</h3>     
+                    <DailyCalendar/>           
                 </div>
             </div>
 

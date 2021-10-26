@@ -84,7 +84,7 @@ const PatientData = () => {
                 }
                 {
                     active===3?
-                    <>Test Graphs</>:
+                    <h3>Test Graphs</h3>:
                     null
                 }
             </div>

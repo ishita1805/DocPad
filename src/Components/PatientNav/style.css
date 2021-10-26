@@ -1,6 +1,7 @@
 .side-nav-patients{
     min-width:270px !important;
-    background:#1b133d;
+    /* background:#1b133d; */
+    background: #221A46;
     height:100vh;
     position: sticky;
     border-radius: 0 15px 15px 0;
@@ -31,7 +32,7 @@
     font-size:15px;
     border-radius:5px;
     color:#cec9df;
-    background:#29214e;
+    background:#090131;
 }
 .psn-search::placeholder{
     color:#635f72;

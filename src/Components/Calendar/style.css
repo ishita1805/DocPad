@@ -1,0 +1,44 @@
+.calendar-daily{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    height:37vh;
+    overflow-y: scroll;
+    font-size:13px;
+    color:rgb(196, 195, 195);
+    font-weight: 500;
+}
+.calendar-daily::-webkit-scrollbar{
+    width:5px;
+    background: none;
+}
+.calendar-daily::-webkit-scrollbar-thumb{
+    width:5px;
+    background: rgb(228, 228, 228);
+    border-radius:6px;
+}
+.calendar-daily p{
+    display:flex;
+    align-items: center;
+    margin:0.5vh 0;
+    justify-content: center;
+}
+.calendar-daily p div{
+  width:60px;
+}
+.calendar-daily span{
+    height:1px;
+    margin:0 1vh;
+    flex-grow: 1;
+    background-color: rgb(228, 228, 228);
+}
+.calendar-event{
+    height:fit-content !important;
+    margin:0 1vh;
+    padding:1vh;
+    color:white;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    flex-grow: 1;
+}
