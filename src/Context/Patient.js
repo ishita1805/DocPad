@@ -6,11 +6,21 @@ const PatientContext = createContext();
 const PatientProvider = ({ children }) => {
     
     const [ID, setID] = useState(0);
-    const [prescriptionID, setPrescriptionID] = useState(0);
     const [patientList, setPatientList] = useState(data);
+    const [patientData, setPatientData] = useState({
+        id:'',
+        name:'',
+        label:'',
+        age:null,
+        gender:'',
+        number: null,
+        email:'',
+        complaints:'',
+        history:''
+    });
 
     return (
-        <PatientContext.Provider value={{ ID, patientList, prescriptionID, setPrescriptionID, setPatientList, setID }}>
+        <PatientContext.Provider value={{ ID, patientList,patientData, setPatientData, setPatientList, setID }}>
             {children}
         </PatientContext.Provider>
     )

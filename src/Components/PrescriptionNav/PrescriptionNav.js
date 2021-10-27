@@ -1,15 +1,34 @@
-import React,{ useContext } from 'react'
+import React,{ useState, useContext } from 'react'
 import './style.css'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Redirect } from 'react-router-dom'
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { PatientContext } from '../../Context/Patient';
-import data from '../../data/tempPatientsList'
 
 const PrescriptionNav = () => {
-    const { patientList, setID, presciptionID, setPrescriptionID } = useContext(PatientContext);
+    const [red,setRed] = useState(false);
+    const { patientList, 
+            setID, 
+            patientData, 
+            setPatientData, 
+            ID } = useContext(PatientContext);
 
-    const newPatient = () => {}
+    const newPatient = () => {
+        setID(0);
+        setPatientData({
+            id:'',
+            name:'',
+            label:'',
+            age:null,
+            gender:'',
+            number: null,
+            email:'',
+            complaints:'',
+            history:''
+        });
+        setRed(true);
+    }
 
     const theme = createTheme({
         palette: {
@@ -27,8 +46,30 @@ const PrescriptionNav = () => {
         }      
     });
 
+    const changePatient = (data) => {
+        if(data && data.id) {
+            setPatientData(()=>data);
+            setID(data.id);
+        }
+        else {
+            setID(0);
+            setPatientData({
+                id:'',
+                name:'',
+                label:'',
+                age:null,
+                gender:'',
+                number: null,
+                email:'',
+                complaints:'',
+                history:''
+            })
+        }
+    }
+
     return (
         <div className='side-nav-pres'>
+            {red?<Redirect to='/patients'/>:null}
             <div className='prsn-head'>
                 <span className="material-icons" onClick={newPatient}>person_add</span>
                 <h3>Patient Details</h3>
@@ -42,8 +83,10 @@ const PrescriptionNav = () => {
                             background: '#090131',
                             borderRadius:'5px',
                         }
-                    }}        
-                    options={data}
+                    }}
+                    onChange={(_,data)=>changePatient(data)}       
+                    defaultValue={ID===0?null:patientData} 
+                    options={patientList}
                     renderInput={(params) => 
                     <TextField 
                     {...params} 
@@ -52,15 +95,15 @@ const PrescriptionNav = () => {
             />
             </ThemeProvider>
             <div className='prsn-deets'>
-                <p><b>Age</b><span>21</span></p>
-                <p><b>Gender</b><span>Female</span></p>
+                <p><b>Age</b><span>{patientData.age}</span></p>
+                <p><b>Gender</b><span>{patientData && patientData.gender}</span></p>
                 <p>
                     <b>Medical History</b>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut ligula aliquet.</span>
+                    <span>{patientData && patientData.history}</span>
                 </p>
                 <p>
                     <b>Presenting Complaints</b>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut ligula aliquet.</span>
+                    <span>{patientData && patientData.complaints}</span>
                 </p>
             </div>
         </div>

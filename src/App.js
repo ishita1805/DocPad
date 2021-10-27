@@ -6,6 +6,7 @@ import Patients from './Containers/Patients/Patients'
 import Prescription from './Containers/Prescription/Prescription'
 import Profile from './Containers/Profile/Profile'
 import Settings from './Containers/Settings/Settings'
+import ViewPrescription from './Containers/Prescription/ViewPrescription';
 import { PatientProvider } from './Context/Patient'
 import TaskManager from './Containers/TaskManager/TaskManager';
 
@@ -18,6 +19,7 @@ const App = () => {
                     <Route path="/" exact><Home/></Route>
                     <Route path="/patients" exact><Patients/></Route>
                     <Route path="/prescription" exact><Prescription/></Route>
+                    <Route path='/prescription-view' exact><ViewPrescription/></Route>
                     <Route path="/profile" exact><Profile/></Route>
                     <Route path="/settings" exact><Settings/></Route>
                     <Route path="/taskmanager" exact><TaskManager/></Route>

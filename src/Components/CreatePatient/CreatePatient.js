@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './style.css'
 import Box from '@mui/material/Box';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -13,13 +13,16 @@ import { PatientContext } from '../../Context/Patient';
 
 
 const CreatePatient = () => {
-    const { setID, patientList, setPatientList } = useContext(PatientContext)
+    const { setID, patientList, redToPrescription, setRedToPrescription, setPatientData, setPatientList } = useContext(PatientContext)
     const { handleSubmit, control } = useForm();
+    const [red,setRed] = useState(false);
 
     const onSubmit = (data) => {
         data.id=6;
+        data.label = data.name;
+        setPatientData(data);
         setPatientList([data, ...patientList]);
-        setID(11);
+        setID(data.id);
     }
 
     const theme = createTheme({

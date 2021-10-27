@@ -1,4 +1,4 @@
-import React,{ useState, useContext } from 'react'
+import React,{ useEffect, useState, useContext } from 'react'
 import PrescriptionCard from '../PrescriptionCard/PrescriptionCard';
 import { Redirect } from 'react-router-dom';
 import { PatientContext } from '../../Context/Patient';
@@ -7,13 +7,16 @@ import './style.css'
 const PatientData = () => {
     const [active, setActive] = useState(1);
     const [red, setRed] = useState(false);
-    const {ID, setPrescriptionID} = useContext(PatientContext);
+    const { ID, patientList, patientData, setPatientData } = useContext(PatientContext);
     const img = "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80"
     
     const newPrescription = () => {
-        setPrescriptionID(ID);
         setRed(true);
     }
+
+    useEffect(() => {
+        if(ID !== 0) setPatientData(patientList.find((x) => x.id === ID));
+    }, [ID])
 
     return (
         <>
@@ -24,9 +27,9 @@ const PatientData = () => {
                         <img src={img}/>
                     </div>
                     <div className='pch-label'>
-                        <h1>Ishita Kabra</h1>
-                        <p>Female&ensp;•&ensp;21 Yrs</p>
-                        <p>Chronic sinusitis</p>
+                        <h1>{patientData.name}</h1>
+                        <p>{patientData.gender}&ensp;•&ensp;{patientData.age} Yrs</p>
+                        <p>{patientData.complaints}</p>
                     </div>
                 </div>
                 <button className='pch-cta' onClick={newPrescription}>
@@ -57,13 +60,13 @@ const PatientData = () => {
                     </div>
                     <h3>General Information</h3>
                     <div className='sec-scroll-ver'>
-                        <div className='gen-info'><b>Name</b> <span>Ishita Kabra</span></div>
-                        <div className='gen-info'><b>Age</b> <span>21 yrs</span></div>
-                        <div className='gen-info'><b>Gender</b> <span>Female</span></div>
-                        <div className='gen-info'><b>Number</b> <span>9003783680</span></div>
-                        <div className='gen-info'><b>Presenting Complaints</b> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut ligula aliquet.</span></div>
-                        <div className='gen-info'><b>Medical History</b> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut ligula aliquet.</span></div>
-                        <div className='gen-info'><b>Email</b> <span>ishitakabra18@gmail.com</span></div>
+                        <div className='gen-info'><b>Name</b> <span>{patientData.name}</span></div>
+                        <div className='gen-info'><b>Age</b> <span>{patientData.age} yrs</span></div>
+                        <div className='gen-info'><b>Gender</b> <span>{patientData.gender}</span></div>
+                        <div className='gen-info'><b>Number</b> <span>{patientData.number}</span></div>
+                        <div className='gen-info'><b>Presenting Complaints</b> <span>{patientData.complaints}</span></div>
+                        <div className='gen-info'><b>Medical History</b> <span>{patientData.history}</span></div>
+                        <div className='gen-info'><b>Email</b> <span>{patientData.email}</span></div>
                     </div>
                     </>:
                     null

@@ -49,6 +49,7 @@ const KeyValueComponent = ({ onChange, value = [], label1, label2 }) => {
         <div className='key-value-inp'>
             <Autocomplete
             freeSolo
+            value={val.key}
             options={options}
             renderInput={(params) => <TextField {...params} onChange={(e)=>handleUniqueKey(e)} label={label1} value={val.key}/>}
             onChange={(_, data) => handleKeyChange(data)}

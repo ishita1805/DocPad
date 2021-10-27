@@ -5,10 +5,10 @@ Electron, react and SQLite stack.
  `npm install`
  `npm start` 
 
-PatientScreen -> Tests
+PatientScreen -> TODOD
+Tests
 - graphical progress of each test
 - number of tests done with date and result (list)
 
 Prescriptions -> TODO
-1. option to add new items to list in autocomplete inputs
-2. KeyValue Input - clear key on clicking on add button
+1. option to add new items to list - autocomplete inputs
