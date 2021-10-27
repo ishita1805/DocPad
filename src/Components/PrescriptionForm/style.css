@@ -14,6 +14,7 @@
 .key-value-inp{
     display:flex;
     flex-direction:row;
+    align-items: center;
     width:100%;
 }
 .key-value-table{
@@ -24,7 +25,7 @@
 .key-value-item{
     display:flex;
     margin:1vh 0;
-    flex-direction:row;
+    align-items: center;
 }
 .inner-kvi{
     border:solid 1px rgb(196, 196, 196);

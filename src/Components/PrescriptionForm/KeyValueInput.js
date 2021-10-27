@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Controller } from "react-hook-form";
 import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import options from '../../data/tempPatientsList'
 import Button from '@mui/material/Button';
 import './style.css'
 
@@ -12,6 +14,7 @@ const KeyValueInput = ({ name, label1, label2, control }) => {
             render={({ onChange, value }) => (
                 <KeyValueComponent onChange={onChange} value={value} label1={label1} label2={label2} />
             )}
+            onChange={([, data]) => data}
         />
     )
 }
@@ -22,23 +25,34 @@ export default KeyValueInput
 const KeyValueComponent = ({ onChange, value = [], label1, label2 }) => {
 
     const [val, setVal] = useState({ key: null, value: null });
-    const handleKeyChange = (e) => setVal({ ...val, key: e.target.value })
+
+    const handleKeyChange = (dt) =>  {
+        if(dt && dt.label) setVal({ ...val, key: dt.label })
+    }
     const handleValChange = (e) => setVal({ ...val, value: e.target.value })
+
     const addInputValues = () => {
         onChange([...value, val]);
-        setVal({ key: '', value: '' })
+        setVal({ key: '', value: '' });
     }
+    
     const removeItem = (it) => {
         onChange(value.filter((x) => x !== it))
+    }
+
+    const handleUniqueKey = (e) => {
+        setVal({ ...val, key: e.target.value })
     }
 
     return (
         <>
         <div className='key-value-inp'>
-            <TextField 
-            label={label1} 
-            onChange={(e) => { handleKeyChange(e) }} 
-            value={val.key} />
+            <Autocomplete
+            freeSolo
+            options={options}
+            renderInput={(params) => <TextField {...params} onChange={(e)=>handleUniqueKey(e)} label={label1} value={val.key}/>}
+            onChange={(_, data) => handleKeyChange(data)}
+            />
             &emsp;
             <TextField 
             label={label2} 

@@ -11,4 +11,4 @@ PatientScreen -> Tests
 
 Prescriptions -> TODO
 1. option to add new items to list in autocomplete inputs
-2. Autocomplete + text input culmination
+2. KeyValue Input - clear key on clicking on add button

@@ -45,7 +45,7 @@ const PrescriptionForm = () => {
                     <MultilineTextInput name="complaints" control={control} label='Patient Complaints'/>
                    
                     <p>Findings</p>
-                    <KeyValueInput name="findings" control={control} label1='FInding' label2='Value'/>
+                    <KeyValueInput name="findings" control={control} label1='Finding' label2='Value'/>
                     
                     <p>Investigations</p>
                     <KeyValueInput name="investigations" control={control} label1='Investigation' label2='Value'/>

@@ -1,13 +1,10 @@
-import React,{ useState} from 'react'
+import React from 'react'
 import options from '../../data/tempPatientsList'
-import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete';
+import Autocomplete from '@mui/material/Autocomplete';
 import { Controller } from "react-hook-form";
 import TextField from '@mui/material/TextField';
 
 const SuggestedTestsInput = ({ control, name, label }) => {
-
-    const filter = createFilterOptions();
-    const [value, setValue] = useState(null);
 
     return (
         <Controller
