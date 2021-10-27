@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SuggestedTestsInput from './SuggestedTestsInput';
 import MultilineTextInput from './MultilineTextInput';
+import KeyValueInput from './KeyValueInput';
 import { useForm } from "react-hook-form";
 
 
@@ -44,8 +45,10 @@ const PrescriptionForm = () => {
                     <MultilineTextInput name="complaints" control={control} label='Patient Complaints'/>
                    
                     <p>Findings</p>
+                    <KeyValueInput name="findings" control={control} label1='FInding' label2='Value'/>
                     
                     <p>Investigations</p>
+                    <KeyValueInput name="investigations" control={control} label1='Investigation' label2='Value'/>
 
                     <p>Suggested Tests</p>
                     <SuggestedTestsInput name='tests' label='Suggested Tests' control={control}/>

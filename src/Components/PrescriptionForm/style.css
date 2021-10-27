@@ -11,3 +11,27 @@
     font-size: 20px;
     margin:1vh;
 }
+.key-value-inp{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+}
+.key-value-table{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+}
+.key-value-item{
+    display:flex;
+    margin:1vh 0;
+    flex-direction:row;
+}
+.inner-kvi{
+    border:solid 1px rgb(196, 196, 196);
+    padding:2vh;
+    width:50%;
+    color:#635f72;
+    display: flex;
+    align-items: center;
+    border-radius:5px;
+}

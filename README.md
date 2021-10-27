@@ -8,3 +8,7 @@ Electron, react and SQLite stack.
 PatientScreen -> Tests
 - graphical progress of each test
 - number of tests done with date and result (list)
+
+Prescriptions -> TODO
+1. option to add new items to list in autocomplete inputs
+2. Autocomplete + text input culmination
