@@ -1,11 +1,10 @@
 import React from 'react'
-import options from '../../data/tempPatientsList'
 import Autocomplete from '@mui/material/Autocomplete';
 import { Controller } from "react-hook-form";
 import TextField from '@mui/material/TextField';
 
-const SuggestedTestsInput = ({ control, name, label }) => {
-
+const MultiAutoComplete = ({ options, control, name, label }) => {
+    
     return (
         <Controller
             render={({ onChange, ...props }) => (
@@ -18,11 +17,11 @@ const SuggestedTestsInput = ({ control, name, label }) => {
                     {...props}
                 />
             )}
-            onChange={([, data]) => data}
+            onChange={([_, data]) => data}
             name={name}
             control={control}
         />
     )
 }
 
-export default SuggestedTestsInput
+export default MultiAutoComplete

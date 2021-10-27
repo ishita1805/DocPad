@@ -3,10 +3,12 @@ import './style.css'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import SuggestedTestsInput from './SuggestedTestsInput';
+import MultiAutoComplete from './MultiAutoComplete';
 import MultilineTextInput from './MultilineTextInput';
 import KeyValueInput from './KeyValueInput';
 import { useForm } from "react-hook-form";
+import options from '../../data/tempTest'
+import MedicationInput from './MedicationInput';
 
 
 const PrescriptionForm = () => {
@@ -45,18 +47,22 @@ const PrescriptionForm = () => {
                     <MultilineTextInput name="complaints" control={control} label='Patient Complaints'/>
                    
                     <p>Findings</p>
-                    <KeyValueInput name="findings" control={control} label1='Finding' label2='Value'/>
+                    <KeyValueInput options={options} name="findings" control={control} label1='Finding' label2='Value'/>
                     
                     <p>Investigations</p>
-                    <KeyValueInput name="investigations" control={control} label1='Investigation' label2='Value'/>
+                    <KeyValueInput options={options} name="investigations" control={control} label1='Investigation' label2='Value'/>
 
                     <p>Suggested Tests</p>
-                    <SuggestedTestsInput name='tests' label='Suggested Tests' control={control}/>
+                    <MultiAutoComplete options={options} name='tests' label='Suggested Tests' control={control}/>
                     
                     <p>Diagnosis</p>
                     <MultilineTextInput name="diagnosis" label="Your Diagnosis" control={control}/>
 
-                    <Button onClick={handleSubmit(onSubmit)} variant='contained' size='medium'>Create Prescription</Button>
+                    <p>Medication</p>
+                    <MedicationInput control={control}/>
+                    
+                    <br/>
+                    <Button onClick={handleSubmit(onSubmit)} variant='contained' size='large'>Create Prescription</Button>
                 
                 </Box>
             </ThemeProvider>

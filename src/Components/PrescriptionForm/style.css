@@ -36,3 +36,39 @@
     align-items: center;
     border-radius:5px;
 }
+.inner-kvi-100{
+    border:solid 1px rgb(196, 196, 196);
+    padding:2vh;
+    width:100%;
+    color:#635f72;
+    display: flex;
+    align-items: center;
+    border-radius:5px;
+}
+.inner-kvi-30{
+    border:solid 1px rgb(196, 196, 196);
+    padding:2vh;
+    width:30%;
+    color:#635f72;
+    display: flex;
+    align-items: center;
+    border-radius:5px;
+}
+.inner-kvi-60{
+    border:solid 1px rgb(196, 196, 196);
+    padding:2vh;
+    width:60%;
+    color:#635f72;
+    display: flex;
+    align-items: center;
+    border-radius:5px;
+}
+.inner-kvi-70{
+    border:solid 1px rgb(196, 196, 196);
+    padding:2vh;
+    width:70%;
+    color:#635f72;
+    display: flex;
+    align-items: center;
+    border-radius:5px;
+}

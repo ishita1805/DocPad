@@ -2,17 +2,16 @@ import React, { useState } from 'react'
 import { Controller } from "react-hook-form";
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import options from '../../data/tempPatientsList'
 import Button from '@mui/material/Button';
 import './style.css'
 
-const KeyValueInput = ({ name, label1, label2, control }) => {
+const KeyValueInput = ({ name, options, label1, label2, control }) => {
     return (
         <Controller
             name={name}
             control={control}
             render={({ onChange, value }) => (
-                <KeyValueComponent onChange={onChange} value={value} label1={label1} label2={label2} />
+                <KeyValueComponent options={options} onChange={onChange} value={value} label1={label1} label2={label2} />
             )}
             onChange={([, data]) => data}
         />
@@ -22,7 +21,7 @@ const KeyValueInput = ({ name, label1, label2, control }) => {
 export default KeyValueInput
 
 
-const KeyValueComponent = ({ onChange, value = [], label1, label2 }) => {
+const KeyValueComponent = ({ options, onChange, value = [], label1, label2 }) => {
 
     const [val, setVal] = useState({ key: null, value: null });
 
@@ -63,7 +62,7 @@ const KeyValueComponent = ({ onChange, value = [], label1, label2 }) => {
             <Button 
             onClick={addInputValues} 
             variant='contained' 
-            size='medium'>
+            size='large'>
                 Add
             </Button>
         </div>
