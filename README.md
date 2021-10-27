@@ -5,10 +5,9 @@ Electron, react and SQLite stack.
  `npm install`
  `npm start` 
 
-PatientScreen -> TODOD
-Tests
-- graphical progress of each test
-- number of tests done with date and result (list)
 
 Prescriptions -> TODO
-1. option to add new items to list - autocomplete inputs
+[ ] Option to add new items to list - autocomplete input
+[ ] View Prescriptions
+[ ] PatientScreen Tests - graph and tables
+[ ] DB Structure and SQL Queries
