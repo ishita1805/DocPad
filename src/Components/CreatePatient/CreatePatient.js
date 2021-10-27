@@ -58,7 +58,7 @@ const CreatePatient = () => {
                         name="age"
                         control={control}
                         render={({ onChange, value }) => (
-                            <TextField label="Age" type="number" sx={{ m: '1.2vh 2.5%', width: '20% !important' }} onChange={onChange} value={value} />
+                            <TextField label="Age" inputProps={{ inputMode: 'numeric', pattern: '[0-9]{2,3}' }} sx={{ m: '1.2vh 2.5%', width: '20% !important' }} onChange={onChange} value={value} />
                         )}
                     />
 
@@ -83,7 +83,7 @@ const CreatePatient = () => {
                         name="number"
                         control={control}
                         render={({ onChange, value }) => (
-                            <TextField label="Number" type="number" onChange={onChange} value={value} />
+                            <TextField label="Number" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={onChange} value={value} />
                         )}
                     />
 

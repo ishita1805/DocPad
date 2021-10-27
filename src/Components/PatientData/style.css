@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: flex-start;
     height:14vh;
-    margin:3vh 0;
+    margin:3vh 0 2vh 0;
 }
 .pch-head-in{
     display: flex;
@@ -57,8 +57,9 @@
 }
 
 .pc-nav{
-    height:5vh !important;
+    min-height:5vh !important;
     display:flex;
+    margin:0;
     flex-direction: row;
     background:#ffffff;
     align-items: center;
@@ -113,7 +114,7 @@
     color:#20053a;
 }
 .gen-info{
-    padding:2vh 0;
+    padding:1.8vh 0;
     display:flex;
     align-items: center;
     margin-right: 2vh;
@@ -126,7 +127,7 @@
 .dia-info{
     border-radius:8px;
     height:12vh;
-    margin: 2vh 1vh 2vh 0;
+    margin: 1.5vh 1vh 2vh 0;
     width:350px !important;
     background: #e7e4f1;  
     display: flex;
@@ -135,13 +136,14 @@
     justify-content: space-between;
     padding:0 2vh;
 }
-.dia-info div{
+.dia-info-text{
     display:flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
 }
 .dia-info h4, .dia-info p{
-    margin:0.5vh 0;
+    margin:0.5vh !important;
     color:#837E98;
 }
 .dia-info span{
@@ -149,7 +151,6 @@
     font-size: 36px !important;
     color:#5f529c;
 }
-
 .pre-card-grid{
     display: flex;
     flex-direction: row;

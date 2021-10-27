@@ -49,7 +49,7 @@ const PatientData = () => {
                     <>
                     <h3>Last Diagnosis</h3>
                     <div className='dia-info'>
-                        <div>
+                        <div className='dia-info-text'>
                         <h4>Asthma, Blood in cough ...</h4>
                         <p>Date: 21/07/2021</p>
                         </div>

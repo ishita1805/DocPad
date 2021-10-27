@@ -3,6 +3,7 @@ import PatientNav from '../../Components/PatientNav/PatientNav'
 import './style.css'
 import { PatientContext } from '../../Context/Patient';
 import PrescriptionNav from '../../Components/PrescriptionNav/PrescriptionNav';
+import PrescriptionForm from '../../Components/PrescriptionForm/PrescriptionForm';
 
 const Prescription = () => {
     const { prescriptionID } = useContext(PatientContext);
@@ -11,9 +12,7 @@ const Prescription = () => {
     return (
         <div className='prescription-container'>
             <PrescriptionNav />
-            <div className='pcontainer-col prescription-add'>
-                <h1>Prescription Form Comes Here</h1>
-            </div>
+            <PrescriptionForm />
         </div>
     )
 }

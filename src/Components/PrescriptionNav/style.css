@@ -1,5 +1,6 @@
 .side-nav-pres{
     min-width:270px !important;
+    max-width: 270px !important;
     background:#221A46;
     height:100vh;
     position: sticky;
@@ -49,4 +50,19 @@
     margin:0;
     padding:1.5vh 0;
     border-bottom:solid 1px #2e2557;
+    display:flex;
+    flex-direction: row;
+    color:#9692A6;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.prsn-deets span{
+    font-size:15px;
+    color:#635f72;
+    font-weight: 500;
+    margin:1vh 0;
+}
+.prsn-deets::-webkit-scrollbar{
+    display: none;
 }

@@ -1,0 +1,13 @@
+.prcontainer-col{
+    height:94vh;
+    padding: 3vh;
+    overflow-y: scroll;
+    width:100%;
+}
+.prcontainer-col p{
+    font-size: 16px !important;
+    font-weight: 600;
+    color: #29214e;
+    font-size: 20px;
+    margin:1vh;
+}

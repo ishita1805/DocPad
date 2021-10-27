@@ -44,14 +44,24 @@ const PrescriptionNav = () => {
                         }
                     }}        
                     options={data}
-                    renderInput={(params) => <TextField {...params} sx={{ color: 'text.active'}} label="Patient Name" />}
+                    renderInput={(params) => 
+                    <TextField 
+                    {...params} 
+                    sx={{ color: 'text.active'}} 
+                    label="Patient Name" />}
             />
             </ThemeProvider>
             <div className='prsn-deets'>
-                <p><b>Age</b></p>
-                <p><b>Gender</b></p>
-                <p><b>Medical History</b></p>
-                <p><b>Presenting Complaints</b></p>
+                <p><b>Age</b><span>21</span></p>
+                <p><b>Gender</b><span>Female</span></p>
+                <p>
+                    <b>Medical History</b>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut ligula aliquet.</span>
+                </p>
+                <p>
+                    <b>Presenting Complaints</b>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut ligula aliquet.</span>
+                </p>
             </div>
         </div>
     )
